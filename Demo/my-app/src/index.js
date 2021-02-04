@@ -61,7 +61,8 @@ function caculateWinner(boards, win_index, step) {
       // 'o','o','x'
       // 'o','x','x'
       // '','x','o'
-      if (win_index.length === 0 || (win_index.length === 1 && ((boards[win_index[0]].length < 2) || (step === 7 && boards[win_index[0]][0] !== ((step - 1) & 1))))) {
+      // if (win_index.length === 0 || (win_index.length === 1 && ((boards[win_index[0]].length < 2) || (step === 7 && boards[win_index[0]][0] !== ((step - 1) & 1))))) {
+      if (win_index.length === 0 || (win_index.length === 1 && (boards[win_index[0]].length < 2 || boards[win_index[0]][0] !== ((step - 1) & 1)))) {
         winner = drawGame;
         return;
       }
